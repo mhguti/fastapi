@@ -1,0 +1,16 @@
+Start Virtual Environment
+venv\Scripts\activate.bat
+
+run main program
+uvicorn main:app --reload
+uvicorn app.main:app --reload
+
+
+Kill program
+Control + C
+
+Auto gen db changes
+alembic revision --autogenerate -m "auto add rest of tables"
+
+install requirements.txt file
+pip install -r requirements.txt
