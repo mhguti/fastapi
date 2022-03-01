@@ -28,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-while True:
+""" while True:
     try:
         conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres', password='password123', cursor_factory=RealDictCursor)
         cursor = conn.cursor()
@@ -37,7 +37,7 @@ while True:
     except Exception as error:
         print("Connecting to database failed")
         print("Error: ", error)
-        time.sleep(3)
+        time.sleep(3) """
 
 
 app.include_router(post.router)
