@@ -8,10 +8,10 @@ jobs:
       name: testing
     env:
       DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
-      DATABASE_PORT: ${{secrets.PORT}}
-      DATABASE_PASSWORD: ${{secrets.PASSWORD}}
-      DATABASE_NAME: ${{secrets.NAME}}
-      DATABASE_USERNAME: ${{secrets.USERNAME}}
+      DATABASE_PORT: ${{secrets.DATABASE_PORT}}
+      DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+      DATABASE_NAME: ${{secrets.DATABASE_NAME}}
+      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       ALGORITHM: ${{secrets.ALGORITHM}}
       ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
@@ -20,7 +20,8 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD: ${{secrets.PASSWORD}}
+          POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+          
         ports:
           - 5432:5432
         options: >-
