@@ -14,3 +14,17 @@ alembic revision --autogenerate -m "auto add rest of tables"
 
 install requirements.txt file
 pip install -r requirements.txt
+
+
+(venv) C:\Users\MikeGuti\Visual Studio Code>heroku ps:restart
+(venv) C:\Users\MikeGuti\Visual Studio Code>heroku run "alembic upgrade head"
+(venv) C:\Users\MikeGuti\Visual Studio Code>heroku logs
+
+(venv) C:\Users\MikeGuti\Visual Studio Code>git add --all     
+(venv) C:\Users\MikeGuti\Visual Studio Code>git commit -m "commented out local database connection in main"
+
+(venv) C:\Users\MikeGuti\Visual Studio Code>git push origin main
+(venv) C:\Users\MikeGuti\Visual Studio Code>git push heroku main 
+
+(venv) C:\Users\MikeGuti\Visual Studio Code>heroku login
+(venv) C:\Users\MikeGuti\Visual Studio Code>heroku create fastapi-guti
