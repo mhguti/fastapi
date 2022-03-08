@@ -21,7 +21,6 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: ${{secrets.PASSWORD}}
-          POSTGRES_DB: ${{secrets.DATABASE_NAME}}
         ports:
           - 5432:5432
         options: >-
